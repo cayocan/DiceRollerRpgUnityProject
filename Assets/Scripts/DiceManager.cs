@@ -12,7 +12,7 @@ public class DiceManager : MonoBehaviour {
 
     private int total;
 
-    const string DISPLAYSCREENNULLTEXT = "0d0";
+    const string DISPLAYSCREENNULLTEXT = "0d0 = 0";
     const string TOTALDISPLAYSCREENNULLTEXT = "Total";
     const string SINGLEMODELABEL = "Single Mode";
     const string SUMMODELABEL = "Sum Mode";
@@ -20,6 +20,8 @@ public class DiceManager : MonoBehaviour {
     private void Awake()
     {
         mode = DiceMode.SingleMode;
+        displayScreen.text = DISPLAYSCREENNULLTEXT;
+        totalDisplayScreen.text = TOTALDISPLAYSCREENNULLTEXT;
         diceModeDisplay.text = SINGLEMODELABEL;
     }
 
@@ -49,7 +51,10 @@ public class DiceManager : MonoBehaviour {
     {
         if (mode == DiceMode.SingleMode)
         {
-            displayScreen.text = "1d" + diceType + " = " + Random.Range(1, diceType + 1);
+            total = Random.Range(1, diceType + 1);
+
+            displayScreen.text = "1d" + diceType + " = " + total;
+            totalDisplayScreen.text = total.ToString();
         }
         else if (mode == DiceMode.SumMode)
         {
@@ -72,7 +77,8 @@ public class DiceManager : MonoBehaviour {
 
     public void HeadsOrTails()
     {
-        ClearTotal();
+        ClearDisplay();
+
         string[] faces = new string[2];
 
         faces[0] = "Head";
