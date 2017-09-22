@@ -42,7 +42,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 11
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 8
+    serializedVersion: 9
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
@@ -87,7 +87,7 @@ LightmapSettings:
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
-  m_ShadowMaskMode: 2
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -142,7 +142,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.11375001, y: 0.78333336}
   m_AnchorMax: {x: 0.88625, y: 0.88000005}
-  m_AnchoredPosition: {x: -103, y: 0.9999695}
+  m_AnchoredPosition: {x: -103, y: 1}
   m_SizeDelta: {x: -206, y: -2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8001684
@@ -2314,7 +2314,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.11375001, y: 0.78333336}
   m_AnchorMax: {x: 0.88625, y: 0.88000005}
-  m_AnchoredPosition: {x: 222, y: 0.50009155}
+  m_AnchoredPosition: {x: 221.99998, y: 0.5001221}
   m_SizeDelta: {x: -443.7, y: -3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1370570324
@@ -2757,6 +2757,7 @@ GameObject:
   - component: {fileID: 1713102472}
   - component: {fileID: 1713102471}
   - component: {fileID: 1713102470}
+  - component: {fileID: 1713102475}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2814,10 +2815,10 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
+  m_HDR: 0
+  m_AllowMSAA: 0
   m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
+  m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
@@ -2834,6 +2835,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1713102475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1713102469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3bd78e09730314ba640dc01b744022, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1805981426
 GameObject:
   m_ObjectHideFlags: 0
